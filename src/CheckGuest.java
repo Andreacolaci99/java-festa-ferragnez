@@ -14,13 +14,18 @@ public class CheckGuest{
 
          boolean entra = false;
 
-        for (int i = 0; i < invitati.length; i++) {
+         int i = 0;
+
+         while( i < invitati.length){
 
            if (nomeOspite.equals(invitati[i])) {
 
-            entra = true ;    
-        }
-        }
+            entra = true ;  
+
+           }
+           
+        i++;
+     }
         if(entra){
 
             System.out.println(nomeOspite + " può entrare");
