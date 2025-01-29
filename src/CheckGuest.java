@@ -10,28 +10,25 @@ public class CheckGuest{
 
          System.out.println("Prego, inserire il proprio nome : ");
 
+         String nomeOspite = scan.nextLine();
+
+         boolean entra = false;
+
         for (int i = 0; i < invitati.length; i++) {
 
-            String nomeOspite = scan.nextLine();
+           if (nomeOspite.equals(invitati[i])) {
 
-            switch (nomeOspite){
-
-                case "Dua Lipa" :
-                case "Paris Hilton":
-                case "Manuel Agnelli":
-                case "J-Ax":
-                case "Francesco Totti":
-                case "Ilary Blasi":
-                case "Bebe Vio":
-                case "Luis":
-                case "Pardis Zarei":
-                case "Martina Maccherone":
-                case "Rachel Zeilic":
-                System.out.println(nomeOspite + " è in lista !! Può entrare !!");
-                break;
-                default:
-                System.out.println("Non sei in lista, puoi tornare da dove sei venuto !!");
-            }
+            entra = true ;    
         }
+        }
+        if(entra){
+
+            System.out.println(nomeOspite + " può entrare");
+
+        }else{
+
+            System.out.println(nomeOspite + " non è in lista");
+
     }
+ }
 }
